@@ -1,0 +1,19 @@
+---
+title: 'Peer-graded Assignment: R Markdown and Leaflet'
+author: "Francesco Mancino"
+date: "14/February/2019"
+output: html_document
+runtime: shiny
+---
+
+```{r , echo = T}
+library(leaflet)
+
+map<-leaflet() %>% addTiles()
+map <- map %>% addMarkers(lat=-0.1998143, lng= -78.4315332, 
+                        popup="Star point of my morning ride")
+map <- map %>% addMarkers(lat=-0.1792328, lng= -78.3613224, 
+                          popup="finishing point of my morning ride")
+
+map
+```
